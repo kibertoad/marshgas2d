@@ -10,7 +10,7 @@ import java.net.URL;
 
 public class Main extends Application {
 
-    private static final URL FXML_URL_MAIN = Main.class.getClassLoader().getResource("fxml/elements.fxml");
+    private static final URL FXML_URL_MAIN = Main.class.getClassLoader().getResource("fxml/canvas.fxml");
     private static final URL FXML_URL_ELEMENTS = Main.class.getClassLoader().getResource("fxml/elements.fxml");
 
     @Override
