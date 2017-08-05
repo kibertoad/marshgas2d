@@ -9,7 +9,7 @@
   <panes>
     <TitledPane animated="false" text="GUI elements">
       <content>
-        <AnchorPane id="elementsPane" fx:id="elementsPane"  minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane id="elementsPane" fx:id="elementsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
       </content>
     </TitledPane>
     <TitledPane animated="false" text="Entities">
