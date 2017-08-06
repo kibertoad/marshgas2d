@@ -23,7 +23,7 @@ public class CanvasController implements Initializable, PostInitializable {
 
     private ImageView activeMarkerView;
 
-    private final Map<ImageView, ElementMarker> markerMap = new HashMap<>();
+    private final Map<ImageView, ElementMarker> markerMap = new LinkedHashMap<>();
 
     @FXML
     @Setter
@@ -31,6 +31,10 @@ public class CanvasController implements Initializable, PostInitializable {
 
     private static final URL PLACEHOLDER_IMAGE_URL = CanvasController.class.getResource("/assets/images/placeholder.png");
     private static final Image PLACEHOLDER_IMAGE = new Image(PLACEHOLDER_IMAGE_URL.toString());
+
+    public void actionMenuNew() {
+        System.out.println("New item.");
+    }
 
     @Subscribe
     public void spawnMarker(SpawnMarkerEvent event) {
