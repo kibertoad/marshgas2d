@@ -13,6 +13,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import lombok.Setter;
 import marshgas2d.events.SpawnMarkerEvent;
+import net.kiberion.swampmachine.gui.prototypes.ElementPrototype;
+import net.kiberion.swampmachine.gui.prototypes.TextButtonPrototype;
 
 import java.io.*;
 import java.net.URL;
@@ -31,22 +33,23 @@ public class ElementsController implements Initializable {
     @Setter
     private AnchorPane elementsPane;
 
-    private void spawnMarkerImage() {
-        eventBus.post(new SpawnMarkerEvent());
+    private void spawnMarkerImage(ElementPrototype prototype) {
+        eventBus.post(new SpawnMarkerEvent(prototype));
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Button buttonList = new Button("ButtonList");
+        Button button = new Button("Button");
+        //Button buttonList = new Button("ButtonList");
         Button image = new Button("Image");
         Button textBox = new Button("TextBox");
-        elementsPane.getChildren().add(buttonList);
+        elementsPane.getChildren().add(button);
         //elementsPane.getChildren().add(image);
         //elementsPane.getChildren().add(textBox);
 
-        buttonList.setOnMouseClicked(event -> {
+        button.setOnMouseClicked(event -> {
             System.out.println("Clicked.");
-            spawnMarkerImage();
+            spawnMarkerImage(new TextButtonPrototype());
         });
     }
 

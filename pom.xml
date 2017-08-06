@@ -13,7 +13,7 @@
         <gdx.version>1.9.4</gdx.version>
         <spring.version>5.0.0.M3</spring.version>
         <jackson.version>2.8.5</jackson.version>
-        <swampmachine.version>0.0.1-SNAPSHOT</swampmachine.version>
+        <swampmachine.version>1.0.0-SNAPSHOT</swampmachine.version>
     </properties>
 
     <build>
@@ -42,6 +42,11 @@
         <dependency>
             <groupId>net.kiberion</groupId>
             <artifactId>swampmachine-api</artifactId>
+            <version>${swampmachine.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.kiberion</groupId>
+            <artifactId>swampmachine-gui-mahler</artifactId>
             <version>${swampmachine.version}</version>
         </dependency>
         <dependency>
